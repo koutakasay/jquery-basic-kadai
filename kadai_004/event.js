@@ -1,12 +1,11 @@
+//ロード時
+$(window).on("load", function() {
+    console.log("loadイベントが発生しました");
+});
+
+//スクロール時
 $(function() {
-    $(window).on("load, scroll", (e) => {
-        //ロード時
-        if(e.type === "load") {
-            console.log("loadイベントが発生しました");
-        }
-        //スクロール時
-        if(e.type === "scroll") {
-            console.log("scrollイベントが発生しました");
-        }
+    $(document).on("scroll", () => {
+        console.log("scrollイベントが発生しました");
     });
 });
